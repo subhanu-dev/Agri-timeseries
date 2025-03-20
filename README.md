@@ -2,6 +2,19 @@
 
 The dataset consisted of over 300 records of rainfall and other climate regressor data from January 2023 to Novemeber. The goal was to predict the future rainfall probabilities based on the trends/ patterns identified from this dataset. 
 
+
+**Tech Stack Used**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-1D7D75?style=for-the-badge&logo=seaborn&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Prophet](https://img.shields.io/badge/Prophet-800080?style=for-the-badge&logo=python&logoColor=white)
+
+
+
+
+
 | Statistic  | Date                  | Avg Temperature | Humidity | Avg Wind Speed | Rain or Not | Cloud Cover | Pressure  |
 |------------|-----------------------|----------------|----------|----------------|-------------|-------------|-----------|
 | Count      | 311                   | 296.00         | 296.00   | 296.00         | 311.00      | 296.00      | 311.00    |
@@ -15,6 +28,11 @@ The dataset consisted of over 300 records of rainfall and other climate regresso
 
 
 The dataset had no duplicate records but feature values for 15 records were found to be missing. they were implied using time based interpolation. Plus the the target column, Rain or Not was as 'Rain' and 'No Rain'. These values were label encoded as binary features. 
-Time series plots revealed that features such as temperature and humidity clearly showed some seasonal variations. A spike of wind speed was also identified here as an outlier and was capped to reduce it's anomalistic impact on the output.
+Time series plots revealed that features such as temperature and humidity clearly showed some seasonal variations. A spike of wind speed was also identified here as an outlier and was capped to reduce it's anomalistic impact on the output. When it comes to impacting the rain, humidity, temperature and pressure were identified as the key features that correlates. Both temperature and humidity have around .30 pearson correlation with rainfall. plus, a multi-collenearity of .90 between temperature and humidity was identified. 
 
 multiple models were tested with varying settings to test out their robustness. 
+
+
+---
+Made with ❤️ by [Subhanu](https://github.com/subhanu-dev)
+
